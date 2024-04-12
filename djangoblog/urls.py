@@ -17,12 +17,27 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from . import views
+# handling static files
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns 
+
+#handling media files
+from django.conf.urls.static import static
+from django.conf import settings
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('about/', views.about, name='about'),
     path('', views.homepage, name='homepage' ),
+    # include apps
     path('articles/', include('articles.urls')),
+    path('accounts/', include('accounts.urls')),
     
 ]
+
+#for static files js, css
+urlpatterns += staticfiles_urlpatterns()
+
+# for media files
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
