@@ -50,3 +50,16 @@ h1 {
   .article p {
     margin-bottom: 10px;
   }
+
+  .logout-btn {
+    background-color: #f1356d;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  ul {
+    list-style-type: none;
+  }
