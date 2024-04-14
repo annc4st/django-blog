@@ -11,7 +11,8 @@
                 <a href= "{% url 'articles:article_detail' article.id %}" >
                     <h2>{{ article.title }}</a></h2>
                     <p>{{ article.snippet }}</p>
-                    <p>{{ article.created_at }}</p>
+                    <p >{{ article.created_at }}</p>
+                    <p class="art-detail-author">added by {{ article.author.username}}</p>
                 </a>
             </div>
 

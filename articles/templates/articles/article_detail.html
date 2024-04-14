@@ -3,11 +3,13 @@
 {% block content %}
 
     <div class="article-container">
-        <div class="article">
+        <div class="article-detail">
             <h2>{{ article.title }}</h2>
+            <p>By {{ article.author }} </p>
         
         <img src="{{article.thumb.url}}"/>
-        <p>By {{ article.author }} </p>
+        
+       
         <div class="article-body">{{ article.body }}</div>
         <p>{{ article.created_at }}</p>
     </div>
