@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import datetime
 
 class Article(models.Model):
     title = models.CharField(max_length=256)
@@ -13,5 +14,9 @@ class Article(models.Model):
         return self.title
     
     def snippet(self):
-        return self.body[:70] + "..."
+        return self.body[:90] + "..."
+    
+    def formatted_created(self):
+        return self.created_at.strftime("%a, %b %d %Y")
+        
     
