@@ -5,13 +5,16 @@
     <div class="article-container">
         <div class="article-detail">
             <h2>{{ article.title }}</h2>
-            <p>By {{ article.author }} </p>
+            <p>By blogger {{ article.author }} </p>
         
         <img src="{{article.thumb.url}}"/>
         
        
-        <div class="article-body">{{ article.body }}</div>
-        <p>{{ article.created_at }}</p>
+        <div class="article-body grid">
+            <p>{{ article.body }}</p>
+
+            </div>
+        <p>Posted {{ article.created_at }}</p>
     </div>
           
     </div>

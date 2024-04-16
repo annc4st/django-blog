@@ -3,7 +3,7 @@
 {% block content %}
 
     <div class="create-article">
-       <h2> Write an Article Here</h2>
+       <h1 class="h1-signup"> Write an Article Here</h1>
 
        <form class="site-form" method="post" action="{% url 'articles:create' %}" enctype="multipart/form-data">
         {% csrf_token %}
